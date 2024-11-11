@@ -6,22 +6,34 @@ Given a 0-indexed integer array `nums`, design an algorithm to make it strictly 
 ### Examples
 #### Example 1:
 Input: nums = [4,9,6,10]
+
 Output: true
+
 Explanation:
+
 Operation 1: Pick i=0, p=3 → nums[0] = 4-3 = 1 → [1,9,6,10]
+
 Operation 2: Pick i=1, p=7 → nums[1] = 9-7 = 2 → [1,2,6,10]
+
 Final array [1,2,6,10] is strictly increasing
+
+
 #### Example 2:
 Input: nums = [6,8,11,12]
+
 Output: true
+
 Explanation: Array is already strictly increasing
+
+
 #### Example 3:
 Input: nums = [5,8,3]
+
 Output: false
+
 Explanation: Cannot make array strictly increasing through allowed operations
 
 ## 🛠️ Solution Approach
-
 ### Core Algorithm
 1. Iterate through array maintaining previous value
 2. For each element:
@@ -30,7 +42,6 @@ Explanation: Cannot make array strictly increasing through allowed operations
    - Find and subtract largest possible prime
 
 ### Detailed Components
-
 #### 1. Prime Number Validator
 ```java
 private boolean isPrime(int n) {
@@ -41,19 +52,17 @@ private boolean isPrime(int n) {
     return true;
 }
 
-2. Largest Prime Finder
-
-
+#### 2. Largest Prime Finder
+```java
 private int findLargestPrime(int n) {
     for (int i = n - 1; i >= 2; i--) {
         if (isPrime(i)) return i;
     }
     return 0;
 }
-3. Main Solution
 
-
-
+#### 3. Main Solution
+```java
 public boolean primeSubOperation(int[] nums) {
     int n = nums.length;
     int prev = 0;
