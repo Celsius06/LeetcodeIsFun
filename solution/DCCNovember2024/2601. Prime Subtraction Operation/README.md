@@ -57,7 +57,6 @@ private int findLargestPrime(int n) {
 ```
 
 ### Main Function
-Implements the core logic:
 ```java
 public boolean primeSubOperation(int[] nums) {
     int prev = 0;  // Initialize `prev` to track last modified element
@@ -84,6 +83,7 @@ public boolean primeSubOperation(int[] nums) {
     - `m`: Maximum number in array
     - `√m`: Checking for prime numbers
 - **Space Complexity**: `O(1)`: Uses constant extra space.
+- **Overall Runtime**: 3ms
 
 ## Constraints
 - `1 ≤ nums.length ≤ 1000`
