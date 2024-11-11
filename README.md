@@ -1,4 +1,4 @@
-# LeetCode Solutions in Java
+# LeetCodeIsFun
 
 Welcome to my repository of LeetCode solutions, primarily implemented in **Java**! This repository is intended to help others understand and solve coding problems, with solutions organized by topic and complexity.
 
@@ -64,5 +64,3 @@ Contributions are welcome! If you have alternative solutions, optimizations, or 
 ## 📬 Contact
 
 If you have any questions or suggestions, feel free to reach out. Happy coding!
-
-```
