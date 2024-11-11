@@ -1,4 +1,4 @@
-# 2601. Prime Subtraction Operation (Daily Coding Challenge - November 2024)
+# 2601. Prime Subtraction Operation 
 
 ## Problem Statement
 Given a 0-indexed integer array `nums`, create an algorithm that makes `nums` strictly increasing by subtracting a prime number from each element at most once. The prime number must be less than the element itself.
