@@ -27,11 +27,11 @@ Welcome to my repository of LeetCode solutions, primarily implemented in **Java*
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/LeetCode-Solutions-Java.git
-   cd LeetCode-Solutions-Java
+   git clone https://github.com/Celsius06/LeetcodeIsFun.git
+   cd LeetcodeIsFun
    ```
 
-2. **Browse by Topic**: Navigate through folders to find specific topics.
+2. **Look For Your Problem**: Navigate through folders to find specific topics.
 3. **View Explanations**: Each solution has a markdown file with an explanation, making it easier to understand the approach and complexity.
 
 ## 📄 Solution Format
@@ -45,17 +45,11 @@ Each solution is structured as follows:
 
 ### Example File Structure
 ```
-- Arrays
-  - TwoSum
-    - Solution.java
-    - Explanation.md
-  - MaximumSubarray
-    - Solution.java
-    - Explanation.md
-- Strings
-  - LongestSubstringWithoutRepeatingCharacters
-    - Solution.java
-    - Explanation.md
+- solution
+  - DCCNovember2024
+    - 2601. Prime Subtraction Operation
+      - Solution.java
+      - README.md (for explaining code concepts)
 ```
 
 ## 🔧 Tools and Environment
@@ -72,6 +66,3 @@ Contributions are welcome! If you have alternative solutions, optimizations, or 
 If you have any questions or suggestions, feel free to reach out. Happy coding!
 
 ```
-
-This template will help you organize your LeetCode repository, making it easy for others to navigate and learn from your solutions. Just replace `your-username` with your actual GitHub username in the clone command.
-
