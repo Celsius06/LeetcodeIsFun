@@ -1,64 +1,96 @@
-# 2070. Most Beautiful Item for Each Query
+---
+Difficulty: Medium
+Involved Data Structures & Algorithms:
+    - Array
+    - Binary Search
+    - Sorting
+---
 
-## Problem Statement
+<!-- problem:start -->
 
-You are given a 2D integer array `items` where `items[i] = [price_i, beautyi]` denotes the price and beauty of an item. You are also given a 0-indexed integer array `queries`. For each `queries[j]`, you want to determine the maximum beauty of an item whose price is less than or equal to `queries[j]`. If no such item exists, the answer to this query is 0.
+# [2070. Most Beautiful Item for Each Query](https://leetcode.com/problems/most-beautiful-item-for-each-query)
 
-Return an array `answer` of the same length as `queries` where `answer[j]` is the answer to the jth query.
+## Problem Description
 
-### Examples
+<!-- description:start -->
 
-#### Example 1:
-- **Input**: `items = [[1,2],[3,2],[2,4],[5,6],[3,5]], queries = [1,2,3,4,5,6]`
-- **Output**: `[2,4,5,5,6,6]`
-- **Explanation**:
-  - For `queries[0]=1`, only `[1,2]` has `price <= 1`, so the answer is 2.
-  - For `queries[1]=2`, items `[1,2]` and `[2,4]` have prices ≤ 2, so the answer is 4.
-  - For `queries[2]=3` and `queries[3]=4`, items `[1,2]`, `[3,2]`, `[2,4]`, and `[3,5]` have prices ≤ 3 and ≤ 4, so the answer is 5.
-  - For `queries[4]=5` and `queries[5]=6`, all items have prices ≤ 5 and ≤ 6, so the answer is 6.
+<p>You are given a 2D integer array <code>items</code> where <code>items[i] = [price<sub>i</sub>, beauty<sub>i</sub>]</code> denotes the <strong>price</strong> and <strong>beauty</strong> of an item respectively.</p>
 
-#### Example 2:
-- **Input**: `items = [[1,2],[1,2],[1,3],[1,4]], queries = [1]`
-- **Output**: `[4]`
+<p>You are also given a <strong>0-indexed</strong> integer array <code>queries</code>. For each <code>queries[j]</code>, you want to determine the <strong>maximum beauty</strong> of an item whose <strong>price</strong> is <strong>less than or equal</strong> to <code>queries[j]</code>. If no such item exists, then the answer to this query is <code>0</code>.</p>
 
-#### Example 3:
-- **Input**: `items = [[10,1000]], queries = [5]`
-- **Output**: `[0]`
+<p>Return <em>an array </em><code>answer</code><em> of the same length as </em><code>queries</code><em> where </em><code>answer[j]</code><em> is the answer to the </em><code>j<sup>th</sup></code><em> query</em>.</p>
 
-### Constraints
-- `1 <= items.length, queries.length <= 10^5`
-- `items[i].length == 2`
-- `1 <= pricei, beautyi, queries[j] <= 10^9`
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
 
-## Solution Approach
+<pre>
+<strong>Input:</strong> items = [[1,2],[3,2],[2,4],[5,6],[3,5]], queries = [1,2,3,4,5,6]
+<strong>Output:</strong> [2,4,5,5,6,6]
+<strong>Explanation:</strong>
+- For queries[0] = 1, [1,2] is the only item which has price &lt; = 1. Hence, the answer for this query is 2.
+- For queries[1] = 2, the items which can be considered are [1,2] and [2,4]. 
+  The maximum beauty among them is 4.
+- For queries[2] = 3 and queries[3] = 4, the items which can be considered are [1,2], [3,2], [2,4], and [3,5].
+  The maximum beauty among them is 5.
+- For queries[4] = 5 and queries[5] = 6, all items can be considered.
+  Hence, the answer for them is the maximum beauty of all items, i.e., 6.
+</pre>
 
-### Steps
-1. **Sorting**: Sort `items` by price in ascending order. If prices are the same, sort by beauty in descending order.
-2. **Precompute Maximum Beauty**: Create an array `maxBeauty`, where each element stores the highest beauty up to that price.
-3. **Binary Search for Queries**: For each query, use binary search to find the highest price that is less than or equal to the query, and return the corresponding beauty.
+<p><strong class="example">Example 2:</strong></p>
 
-### Helper Functions
-#### Binary Search
-Use binary search to find the highest price in `items` that is less than or equal to each query.
+<pre>
+<strong>Input:</strong> items = [[1,2],[1,2],[1,3],[1,4]], queries = [1]
+<strong>Output:</strong> [4]
+<strong>Explanation:</strong> 
+The price of every item is equal to 1, so we choose the item with the maximum beauty 4. 
+Note that multiple items can have the same price and/or beauty.  
+</pre>
 
-### Solution Code
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> items = [[10,1000]], queries = [5]
+<strong>Output:</strong> [0]
+<strong>Explanation:</strong>
+No item has a price less than or equal to 5, so no item can be chosen.
+Hence, the answer to the query is 0.
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= items.length, queries.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>items[i].length == 2</code></li>
+	<li><code>1 &lt;= price<sub>i</sub>, beauty<sub>i</sub>, queries[j] &lt;= 10<sup>9</sup></code></li>
+</ul>
+
+<!-- description:end -->
+
+
+## Solutions
+
+<!-- solution:start -->
+
+#### Java
+
 ```java
+
+// import java.util.Arrays;
+
 class Solution {
     public int[] maximumBeauty(int[][] items, int[] queries) {
-        // Step 1: Sort items by price (ascending). If prices are equal, sort by beauty (descending).
         Arrays.sort(items, (a, b) -> {
             if (a[0] != b[0]) {
                 return Integer.compare(a[0], b[0]);
             } else {
-                return Integer.compare(b[1], a[1]);
+                return Integer.compare(b[1], a[1]); 
             }
         });
         
         int n = items.length;
-        
-        // Step 2: Precompute max beauty up to each price.
         int[] maxBeauty = new int[n];
-        maxBeauty[0] = items[0][1];
+        maxBeauty[0] = items[0][1]; 
         for (int i = 1; i < n; i++) {
             maxBeauty[i] = Math.max(maxBeauty[i - 1], items[i][1]);
         }
@@ -66,42 +98,37 @@ class Solution {
         int m = queries.length;
         int[] answer = new int[m];
         
-        // Step 3: Process each query using binary search.
         for (int i = 0; i < m; i++) {
             int query = queries[i];
             int left = 0, right = n - 1;
-            
-            // Binary search for the highest price less than or equal to the query.
             while (left <= right) {
                 int mid = left + (right - left) / 2;
                 if (items[mid][0] <= query) {
-                    left = mid + 1;
+                    left = mid + 1; 
                 } else {
-                    right = mid - 1;
+                    right = mid - 1; 
                 }
             }
-            
-            // Step 4: If found, add the maximum beauty for the found price to answer.
+
             if (right >= 0) {
                 answer[i] = maxBeauty[right];
             } else {
-                answer[i] = 0;
+                answer[i] = 0; 
             }
         }
         
         return answer;
     }
 }
+
 ```
 
-### Complexity Analysis 
-- **Time Complexity**: `O(nlog(n) + mlog(n))`
-    - `n`: Length of `items` array
-    - `m`: Length of `queries` array
-- **Space Complexity**: `O(n)`:
-- **Overall Runtime**: 45ms
+#### Complexity 
+- Time: $O(n \times \log n + m \times \log m)$, with `n` is the number of items (length of items array) and `m` is the number of queries (length of queries array).
+- Space: $O(n)$
 
-### Constraints
-- `1 <= items.length, queries.length <= 105`
-- `items[i].length == 2`
-- `1 <= pricei, beautyi, queries[j] <= 109`
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
