@@ -43,8 +43,6 @@ Use binary search to find the highest price in `items` that is less than or equa
 
 ### Solution Code
 ```java
-import java.util.Arrays;
-
 class Solution {
     public int[] maximumBeauty(int[][] items, int[] queries) {
         // Step 1: Sort items by price (ascending). If prices are equal, sort by beauty (descending).
@@ -94,3 +92,16 @@ class Solution {
         return answer;
     }
 }
+```
+
+### Complexity Analysis 
+- **Time Complexity**: `O(nlog(n) + mlog(n))`
+    - `n`: Length of `items` array
+    - `m`: Length of `queries` array
+- **Space Complexity**: `O(n)`:
+- **Overall Runtime**: 45ms
+
+### Constraints
+- `1 <= items.length, queries.length <= 105`
+- `items[i].length == 2`
+- `1 <= pricei, beautyi, queries[j] <= 109`
