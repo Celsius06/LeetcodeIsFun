@@ -10,7 +10,7 @@ Involved Data Structures & Algorithms:
 
 # [2070. Most Beautiful Item for Each Query](https://leetcode.com/problems/most-beautiful-item-for-each-query)
 
-## Problem Description
+## 1/ Problem Description
 
 <!-- description:start -->
 
@@ -20,7 +20,6 @@ Involved Data Structures & Algorithms:
 
 <p>Return <em>an array </em><code>answer</code><em> of the same length as </em><code>queries</code><em> where </em><code>answer[j]</code><em> is the answer to the </em><code>j<sup>th</sup></code><em> query</em>.</p>
 
-<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
@@ -56,19 +55,20 @@ No item has a price less than or equal to 5, so no item can be chosen.
 Hence, the answer to the query is 0.
 </pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
 
+<p><strong>Constraints:</strong></p>
 <ul>
 	<li><code>1 &lt;= items.length, queries.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>items[i].length == 2</code></li>
 	<li><code>1 &lt;= price<sub>i</sub>, beauty<sub>i</sub>, queries[j] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<p>&nbsp;</p>
+
 <!-- description:end -->
 
 
-## Solutions
+## 2/ Solution
 
 <!-- solution:start -->
 
