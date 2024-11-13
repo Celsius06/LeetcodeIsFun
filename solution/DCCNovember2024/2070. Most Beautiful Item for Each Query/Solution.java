@@ -1,3 +1,8 @@
+// Sorting, Prefix Maximums, Binary Search
+
+// The overall runtime complexity is O(n log n + m log n), where n is the number of items, and m is the number of queries. 
+// Sorting items takes O(n log n), building the maxBeauty array takes O(n), and each query is answered in O(log n) due to binary search.
+
 import java.util.Arrays;
 
 class Solution {
