@@ -7,7 +7,6 @@
 // + Time: O(n), with n is the array length
 // + Space: O(1)
 
-
 class Solution {
     public int findLengthOfShortestSubarray(int[] arr) {
         int n = arr.length;
