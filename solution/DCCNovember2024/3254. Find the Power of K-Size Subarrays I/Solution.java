@@ -1,3 +1,11 @@
+// 3254. Find the Power of K-Size Subarrays I
+// Brute Force
+// Runtime: 2ms
+
+// Complexity
+// + Time: O(n * k)
+// + Space: O(n - k + 1)
+
 class Solution {
     public int[] resultsArray(int[] nums, int k) {
         int n = nums.length;
