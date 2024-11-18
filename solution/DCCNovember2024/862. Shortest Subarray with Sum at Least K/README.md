@@ -44,10 +44,7 @@ Potential Data Structures & Algorithms:
 
 <!-- solution:start -->
 
-### Solution 1
-
 #### Java
-
 ```java
 // 862. Shortest Subarray with Sum at Least K
 
