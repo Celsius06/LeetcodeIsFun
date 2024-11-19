@@ -51,8 +51,6 @@ We return 0 because no subarrays meet the conditions.
 
 ## Solutions
 <!-- solution:start -->
-
-### Solution 1: Sliding Window + Hash Table
 <!-- tabs:start -->
 #### Java
 ```java
@@ -62,8 +60,8 @@ We return 0 because no subarrays meet the conditions.
 // Runtime: 33ms
 
 // Complexity
-// + Time: O(n), with `n` is the length of array `nums`
-// + Space: O(k), for the HashSet storing at most `k` elements.
+// + Time: O(n), with n is the length of array nums
+// + Space: O(k), for the HashSet storing at most k elements.
 
 class Solution {
     public long maximumSubarraySum(int[] nums, int k) {
