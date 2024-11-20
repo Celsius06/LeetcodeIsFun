@@ -1,3 +1,12 @@
+// 2516. Take K of Each Character From Left and Right
+
+// Sliding Window
+// Runtime: 17ms
+
+// Complexity:
+// + Time: O(n)
+// + Space: O(1)
+
 class Solution {
     public int takeCharacters(String s, int k) {
         if (k == 0)
