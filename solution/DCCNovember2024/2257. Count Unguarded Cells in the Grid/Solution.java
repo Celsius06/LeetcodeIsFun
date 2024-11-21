@@ -1,3 +1,12 @@
+// 2257. Count Unguarded Cells in the Grid
+
+// 2D Grid Simulation
+// Runtime: 25ms
+
+// Complexity:
+// + Time: O(m * n + k)
+// + Space: O(m * n)
+
 class Solution {
     public int countUnguarded(int m, int n, int[][] guards, int[][] walls) {
         char[][] grid = new char[m][n];

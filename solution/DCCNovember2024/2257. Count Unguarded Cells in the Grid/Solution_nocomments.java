@@ -7,7 +7,6 @@
 // + Time: O(m * n + k)
 // + Space: O(m * n)
 
-
 class Solution {
     public int countUnguarded(int m, int n, int[][] guards, int[][] walls) {
         char[][] grid = new char[m][n];
