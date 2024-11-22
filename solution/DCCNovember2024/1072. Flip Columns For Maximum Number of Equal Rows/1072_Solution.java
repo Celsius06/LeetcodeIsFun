@@ -1,7 +1,7 @@
 // 1072. Flip Columns For Maximum Number of Equal Rows
 
 // Pattern Matching with BitMask
-// Runtime: 23ms
+// Runtime: 24ms
 
 // Complexity:
 // + Time: O(m * n), with m is the number of rows and n is the number of columns in the matrix
