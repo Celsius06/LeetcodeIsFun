@@ -1,3 +1,14 @@
+// 1861. Rotate the Box
+
+// Queue
+// Runtime: 20ms
+
+// Complexity:
+// + Time: O(m * n)
+// + Space: O(m * n)
+// m is the number of rows in the original box
+// n is the number of columns in the original box
+
 class Solution {
     public char[][] rotateTheBox(char[][] box) {
         int m = box.length, n = box[0].length;
