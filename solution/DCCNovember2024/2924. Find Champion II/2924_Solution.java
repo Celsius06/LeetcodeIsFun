@@ -4,7 +4,7 @@
 // Runtime: 1ms
 
 // Complexity:
-// + Time: O(n + m) 
+// + Time: O(n + m), where m is the number of edges and n is the number of nodes
 // + Space: O(n)
 
 class Solution {
