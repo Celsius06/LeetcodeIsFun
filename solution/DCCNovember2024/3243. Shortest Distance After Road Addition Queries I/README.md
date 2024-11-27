@@ -15,6 +15,7 @@ Utilizable DSAs:
 <p><code>queries[i] = [u<sub>i</sub>, v<sub>i</sub>]</code> represents the addition of a new <strong>unidirectional</strong> road from city <code>u<sub>i</sub></code> to city <code>v<sub>i</sub></code>. After each query, you need to find the <strong>length</strong> of the <strong>shortest path</strong> from city <code>0</code> to city <code>n - 1</code>.</p>
 <p>Return an array <code>answer</code> where for each <code>i</code> in the range <code>[0, queries.length - 1]</code>, <code>answer[i]</code> is the <em>length of the shortest path</em> from city <code>0</code> to city <code>n - 1</code> after processing the <strong>first </strong><code>i + 1</code> queries.</p>
 
+## Examples
 <p><strong class="example">Example 1:</strong></p>
 <div class="example-block">
 <p><strong>Input:</strong> <span class="example-io">n = 5, queries = [[2,4],[0,2],[0,4]]</span></p>
@@ -39,7 +40,7 @@ Utilizable DSAs:
 <p>After the addition of the road from 0 to 2, the length of the shortest path remains 1.</p>
 </div>
 
-<p><strong>Constraints:</strong></p>
+## Constraints
 <ul>
 	<li><code>3 &lt;= n &lt;= 500</code></li>
 	<li><code>1 &lt;= queries.length &lt;= 500</code></li>
@@ -50,6 +51,8 @@ Utilizable DSAs:
 </ul>
 <!-- description:end -->
 
+
+<p>&nbsp;</p>
 
 ## Solutions
 <!-- solution:start -->
