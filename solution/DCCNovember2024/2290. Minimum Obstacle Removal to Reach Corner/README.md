@@ -52,6 +52,9 @@ Note that there may be other ways to remove 2 obstacles to create a path.
 <!-- description:end -->
 
 
+<p>&nbsp;</p>
+
+
 ## Solutions
 <!-- solution:start -->
 #### Java
