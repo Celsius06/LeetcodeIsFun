@@ -1,3 +1,12 @@
+// 2290. Minimum Obstacle Removal to Reach Corner
+
+// BFS
+// Runtime: 51ms
+
+// Complexity:
+// + Time: O(m * n)
+// + Space: O(m * n)
+
 import java.util.*;
 
 class Solution {
