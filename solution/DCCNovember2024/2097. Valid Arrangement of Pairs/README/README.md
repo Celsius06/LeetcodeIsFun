@@ -15,7 +15,7 @@ Utilizable DSAs:
 <p><strong>Note:</strong> The inputs will be generated such that there exists a valid arrangement of <code>pairs</code>.</p>
 
 ### Examples
-<p><strong class="example">Example 1:</strong></p>
+<p><strong class="example">1.</strong></p>
 <pre>
 <strong>Input:</strong> pairs = [[5,1],[4,5],[11,9],[9,4]]
 <strong>Output:</strong> [[11,9],[9,4],[4,5],[5,1]]
@@ -26,7 +26,7 @@ end<sub>1</sub> = 4 == 4 = start<sub>2</sub>
 end<sub>2</sub> = 5 == 5 = start<sub>3</sub>
 </pre>
 
-<p><strong class="example">Example 2:</strong></p>
+<p><strong class="example">2.</strong></p>
 <pre>
 <strong>Input:</strong> pairs = [[1,3],[3,2],[2,1]]
 <strong>Output:</strong> [[1,3],[3,2],[2,1]]
@@ -37,7 +37,7 @@ end<sub>1</sub> = 2 == 2 = start<sub>2</sub>
 The arrangements [[2,1],[1,3],[3,2]] and [[3,2],[2,1],[1,3]] are also valid.
 </pre>
 
-<p><strong class="example">Example 3:</strong></p>
+<p><strong class="example">3.</strong></p>
 <pre>
 <strong>Input:</strong> pairs = [[1,2],[1,3],[2,1]]
 <strong>Output:</strong> [[1,2],[2,1],[1,3]]
@@ -48,7 +48,6 @@ end<sub>1</sub> = 1 == 1 = start<sub>2</sub>
 </pre>
 
 ### Constraints
-<p><strong>Constraints:</strong></p>
 <ul>
 	<li><code>1 &lt;= pairs.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>pairs[i].length == 2</code></li>
