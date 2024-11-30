@@ -62,9 +62,9 @@ end<sub>1</sub> = 1 == 1 = start<sub>2</sub>
 
 ## Solutions
 <!-- solution:start -->
-### 1/ Hierholzer's Algorithm
+#### 1/ Hierholzer's Algorithm
 <!-- tabs:start -->
-#### Java
+##### Java
 ```java
 // 2097. Valid Arrangement of Pairs
 
