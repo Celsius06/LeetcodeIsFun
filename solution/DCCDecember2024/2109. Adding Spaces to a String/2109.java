@@ -9,7 +9,7 @@
 
 class Solution {
     public String addSpaces(String s, int[] spaces) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder result = new StringBuilder();
         int index = 0;
         int n = spaces.length;
 
