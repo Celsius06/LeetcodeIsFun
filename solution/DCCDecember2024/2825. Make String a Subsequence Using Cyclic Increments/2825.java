@@ -14,11 +14,10 @@ class Solution {
         while (i < str1.length() && j < str2.length()) {
             char c1 = str1.charAt(i);
             char c2 = str2.charAt(j);
-            // Check if c1 matches c2 or can be incremented cyclically to match
             if (c1 == c2 || (c1 + 1 - 'a') % 26 + 'a' == c2) {
-                j++; // Match found for str2[j]
+                j++; 
             }
-            i++; // Move to the next character in str1
+            i++;
         }
         
         return j == str2.length();
