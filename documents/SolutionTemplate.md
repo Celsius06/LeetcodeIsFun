@@ -1,5 +1,3 @@
-<!-- tabs:start -->
-
 // Problem Name
 
 // Method
@@ -13,5 +11,3 @@ class Solution {
 
 }
 
-
-<!-- tabs:end -->
