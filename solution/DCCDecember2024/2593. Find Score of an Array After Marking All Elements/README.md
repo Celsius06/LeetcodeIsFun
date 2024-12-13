@@ -10,7 +10,7 @@ Utilizable DSAs/Methods/Approaches:
 
 <!-- problem:start -->
 # [2593. Find Score of an Array After Marking All Elements](https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements)
-## Descriptio
+## Description
 <!-- description:start -->
 <p>You are given an array <code>nums</code> consisting of positive integers.</p>
 <p>Starting with <code>score = 0</code>, apply the following algorithm:</p>
