@@ -53,6 +53,9 @@ Our score is 1 + 2 + 2 = 5.
 <!-- description:end -->
 
 
+<p>&nbsp;</p>
+
+
 ## Solutions
 <!-- solution:start -->
 ### Solution 1: Priority Queue (Min Heap)
