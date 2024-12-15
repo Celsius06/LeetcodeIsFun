@@ -5,7 +5,7 @@
 // Runtime: 329ms
 
 // Complexity:
-// + Time: O(n + extraSudents * log(n))
+// + Time: O(n * log(n))
 // + Space: O(n)
 
 import java.util.PriorityQueue;
@@ -56,4 +56,3 @@ class Solution {
         }
     }
 }
-
