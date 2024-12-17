@@ -58,34 +58,58 @@ Note that the string &quot;bbabaaa&quot; is lexicographically larger but the let
 <!-- tabs:start -->
 #### Java
 ```java
+// 2182. Construct String With Repeat Limit
+
+// Priority Queue (Max-Heap)
+// Runtime: 32ms
+
+// Complexity:
+// + Time: O(k * log(n))
+// + Space: O(n)
+
+import java.util.*;
+
 class Solution {
     public String repeatLimitedString(String s, int repeatLimit) {
-        int[] cnt = new int[26];
-        for (int i = 0; i < s.length(); ++i) {
-            ++cnt[s.charAt(i) - 'a'];
+        int[] freq = new int[26];
+        for (char c : s.toCharArray()) {
+            freq[c - 'a']++;
         }
-        StringBuilder ans = new StringBuilder();
-        for (int i = 25, j = 24; i >= 0; --i) {
-            j = Math.min(j, i - 1);
-            while (true) {
-                for (int k = Math.min(cnt[i], repeatLimit); k > 0; --k) {
-                    ans.append((char) ('a' + i));
-                    --cnt[i];
-                }
-                if (cnt[i] == 0) {
-                    break;
-                }
-                while (j >= 0 && cnt[j] == 0) {
-                    --j;
-                }
-                if (j < 0) {
-                    break;
-                }
-                ans.append((char) ('a' + j));
-                --cnt[j];
+
+        PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b) -> b[0] - a[0]);
+        for (char i = 'a'; i <= 'z'; i++) {
+            if (freq[i - 'a'] > 0) {
+                maxHeap.offer(new int[]{i, freq[i - 'a']});
             }
         }
-        return ans.toString();
+
+        StringBuilder result = new StringBuilder();
+
+        while (!maxHeap.isEmpty()) {
+            int[] current = maxHeap.poll();
+            char ch = (char) current[0];
+            int count = Math.min(current[1], repeatLimit);
+
+            for (int i = 0; i < count; i++) {
+                result.append(ch);
+            }
+
+            if (current[1] > repeatLimit) {
+                if (maxHeap.isEmpty()) break;
+
+                int[] next = maxHeap.poll();
+                result.append((char) next[0]);
+                next[1]--;
+
+                if (next[1] > 0) {
+                    maxHeap.offer(next);
+                }
+
+                maxHeap.offer(new int[]{ch, current[1] - repeatLimit});
+            }
+        }
+
+        return result.toString();
     }
 }
 ```
