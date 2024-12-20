@@ -1,6 +1,7 @@
 // Problem Name
 
-// Method
+// DSAs
+// Methods & Approaches
 // Runtime:
 
 // Complexity:
