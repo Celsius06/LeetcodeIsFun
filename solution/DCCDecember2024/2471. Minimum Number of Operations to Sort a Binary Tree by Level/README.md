@@ -75,69 +75,96 @@ It can be proven that 3 is the minimum number of operations needed.
 <!-- tabs:start -->
 #### Java
 ```java
+// 2471. Minimum Number of Operations to Sort a Binary Tree by Level
+
+// BFS, Queue, ArrayList, Map
+// Runtime: 71ms
+
+// Complexity:
+// + Time: O(n log(n))
+// + Space: O(n)
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode() {}
+ * TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) {
+ * this.val = val;
+ * this.left = left;
+ * this.right = right;
+ * }
  * }
  */
+
 class Solution {
     public int minimumOperations(TreeNode root) {
-        Deque<TreeNode> q = new ArrayDeque<>();
-        q.offer(root);
-        int ans = 0;
-        while (!q.isEmpty()) {
-            List<Integer> t = new ArrayList<>();
-            for (int n = q.size(); n > 0; --n) {
-                TreeNode node = q.poll();
-                t.add(node.val);
-                if (node.left != null) {
-                    q.offer(node.left);
-                }
-                if (node.right != null) {
-                    q.offer(node.right);
-                }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int totalOperations = 0;
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            List<Integer> level = new ArrayList<>();
+
+            // Collect all node values at the current level
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                level.add(node.val);
+
+                if (node.left != null)
+                    queue.offer(node.left);
+                if (node.right != null)
+                    queue.offer(node.right);
             }
-            ans += f(t);
+
+            // Calculate minimum swaps for the current level
+            totalOperations += calculateMinimumSwaps(level);
         }
-        return ans;
+
+        return totalOperations;
     }
 
-    private int f(List<Integer> t) {
-        int n = t.size();
-        List<Integer> alls = new ArrayList<>(t);
-        alls.sort((a, b) -> a - b);
-        Map<Integer, Integer> m = new HashMap<>();
-        for (int i = 0; i < n; ++i) {
-            m.put(alls.get(i), i);
-        }
-        int[] arr = new int[n];
-        for (int i = 0; i < n; ++i) {
-            arr[i] = m.get(t.get(i));
-        }
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            while (arr[i] != i) {
-                swap(arr, i, arr[i]);
-                ++ans;
-            }
-        }
-        return ans;
-    }
+    private int calculateMinimumSwaps(List<Integer> level) {
+        int n = level.size();
+        int[] arr = level.stream().mapToInt(i -> i).toArray();
 
-    private void swap(int[] arr, int i, int j) {
-        int t = arr[i];
-        arr[i] = arr[j];
-        arr[j] = t;
+        // Map values to their sorted indices
+        Map<Integer, Integer> indexMap = new LinkedHashMap<>();
+        int[] sortedArr = arr.clone();
+        Arrays.sort(sortedArr);
+        for (int i = 0; i < n; i++) {
+            indexMap.put(sortedArr[i], i);
+        }
+
+        // Replace array values with their sorted indices
+        for (int i = 0; i < n; i++) {
+            arr[i] = indexMap.get(level.get(i));
+        }
+
+        // Count cycles for minimum swaps
+        boolean[] visited = new boolean[n];
+        int swapCount = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (visited[i] || arr[i] == i)
+                continue;
+
+            int cycleLength = 0;
+            int j = i;
+            while (!visited[j]) {
+                visited[j] = true;
+                j = arr[j];
+                cycleLength++;
+            }
+
+            swapCount += (cycleLength - 1);
+        }
+
+        return swapCount;
     }
 }
 ```
