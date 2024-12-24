@@ -1,6 +1,6 @@
 // 3203. Find Minimum Diameter After Merging Two Trees
 
-// BFS
+// BFS, Graph, Queue, Union-Find
 // Runtime: 148ms
 
 // Complexity:
