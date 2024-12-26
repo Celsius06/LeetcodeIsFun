@@ -1,6 +1,6 @@
 // 494. Target Sum
 
-// Dynamic Programming
+// Dynamic Programming, Recursion
 // Runtime: 2ms
 
 // Complexity:
