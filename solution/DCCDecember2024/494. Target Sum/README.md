@@ -7,7 +7,7 @@ Utilizable DSAs/Methods/Approaches:
 ---
 
 <!-- problem:start -->
-# [494. Target Sum](https://leetcode.com/problems/target-sum
+# [494. Target Sum](https://leetcode.com/problems/target-sum)
 ## Description
 <!-- description:start -->
 <p>You are given an integer array <code>nums</code> and an integer <code>target</code>.</p>
