@@ -13,13 +13,16 @@ class Solution {
 
         // Count total '1's
         for (char c : s.toCharArray()) {
-            if (c == '1') totalOnes++;
+            if (c == '1')
+                totalOnes++;
         }
 
         // Calculate score in a single pass
         for (int i = 0; i < s.length() - 1; i++) {
-            if (s.charAt(i) == '0') leftZeros++;
-            else totalOnes--;
+            if (s.charAt(i) == '0')
+                leftZeros++;
+            else
+                totalOnes--;
 
             maxScore = Math.max(maxScore, leftZeros + totalOnes);
         }
