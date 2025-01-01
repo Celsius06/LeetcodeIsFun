@@ -1,12 +1,11 @@
-// Problem Name
+// 983. Minimum Cost For Tickets
 
-// DSAs
-// Methods & Approaches
-// Runtime:
+// Memoization Array, Dynamic Programming, Recursive Traversal
+// Runtime: 0ms
 
 // Complexity:
-// + Time:
-// + Space:
+// + Time: O(n)
+// + Space: O(n)
 
 class Solution {
     public int mincostTickets(int[] days, int[] costs) {
