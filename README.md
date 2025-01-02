@@ -52,15 +52,5 @@ Each solution is structured as follows:
       - README.md (for explaining code concepts)
 ```
 
-## 🔧 Tools and Environment
-
-- **Language**: Java (JDK 11+)
-- **Editor**: Any preferred IDE (e.g., IntelliJ, Eclipse, VS Code)
-
-## 🤝 Contributing
-
-Contributions are welcome! If you have alternative solutions, optimizations, or additional problems, feel free to submit a pull request.
-
-## 📬 Contact
-
-If you have any questions or suggestions, feel free to reach out. Happy coding!
+### Special Thanks
+Special thanks to [@doocs](https://github.com/doocs) for the solution file structure <3
