@@ -1,8 +1,6 @@
 <!-- problem:start -->
 # [2559. Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges)
 
-<p>&nbsp;</p>
-
 ## Solutions
 <!-- solution:start -->
 ##### 1/ Prefix Sum Array, Range Query Handling
