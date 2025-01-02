@@ -3,7 +3,7 @@
 
 ## Solutions
 <!-- solution:start -->
-##### 1/ Prefix Sum Array, Range Query Handling
+### 1/ Prefix Sum Array, Range Query Handling
 <!-- tabs:start -->
 ##### Java
 ```java
@@ -52,7 +52,11 @@ class Solution {
 ```
 <!-- tabs:end -->
 
-##### 2/ Preprocessing + Binary Search
+
+<p>&nbsp;</p>
+
+
+### 2/ Preprocessing + Binary Search
 <!-- tabs:start -->
 ##### Java
 ```java
