@@ -46,7 +46,7 @@ Each solution is structured as follows:
 ### Example File Structure
 ```
 - solution
-  - DCCNovember2024
+  - 2600 - 2699
     - 2601. Prime Subtraction Operation
       - Solution.java
       - README.md (for explaining code concepts)
