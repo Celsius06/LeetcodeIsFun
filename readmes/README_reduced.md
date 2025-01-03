@@ -1,15 +1,8 @@
 <!-- problem:start -->
 # [Problem Number. Problem Name](Problem Link)
-
-
-
-<p>&nbsp;</p>
-
-
-
 ## Solutions
 <!-- solution:start -->
-##### 1/ Name of the DS/A/Method/....
+### 1/ Name of the DS/A/Method/....
 <!-- tabs:start -->
 Explanation of the approach....
 ##### Java
