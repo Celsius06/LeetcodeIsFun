@@ -7,6 +7,8 @@
 // + Time: O(n)
 // + Space: O(n)
 
+import java.util.Arrays;
+
 class Solution {
     public int mincostTickets(int[] days, int[] costs) {
         int[] memo = new int[days.length];
