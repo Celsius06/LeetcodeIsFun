@@ -2,7 +2,6 @@
 // Difficulty: Hard
 
 // BFS (0-1)
-// Methods & Approaches
 // Runtime: 15ms (18/01/2025 | 11pm - GMT+7)
 
 // Complexity:
