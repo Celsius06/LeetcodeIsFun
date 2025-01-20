@@ -1,3 +1,12 @@
+// 2661. First Completely Painted Row or Column
+// Difficulty: Medium
+
+// Runtime: 23ms (20/01/2025 | 9pm - GMT+7)
+
+// Complexity:
+// + Time: O(m * n)
+// + Space: O(m * n)
+
 import java.util.HashMap;
 import java.util.Map;
 
