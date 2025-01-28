@@ -1,7 +1,7 @@
 // 2658. Maximum Number of Fish in a Grid
 // Difficulty: Medium
 
-// BFS
+// BFS, Queue
 // Runtime: 5ms (28/01/2025 | 7pm - GMT+7)
 
 // Complexity:
