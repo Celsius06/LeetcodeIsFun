@@ -3,7 +3,7 @@
 
 // DSAs
 // Methods & Approaches
-// Runtime: _ms (05/02/2025 | 8pm - GMT+7)
+// Runtime: 0ms (05/02/2025 | 8pm - GMT+7)
 
 // Complexity:
 // + Time: O(n)
