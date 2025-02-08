@@ -9,6 +9,9 @@
 // + Time: O()
 // + Space: O()
 
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     public int[] queryResults(int limit, int[][] queries) {
         Map<Integer, Integer> ballToColor = new HashMap<>();
