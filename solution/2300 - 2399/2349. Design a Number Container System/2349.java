@@ -9,6 +9,10 @@
 // + Time: O(log n) for find() and O(1) for change()
 // + Space: O(M) where M is the number of unique numbers
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeSet;
+
 class NumberContainers {
     // Mapping from index to number currently stored.
     private Map<Integer, Integer> indexToNum;
