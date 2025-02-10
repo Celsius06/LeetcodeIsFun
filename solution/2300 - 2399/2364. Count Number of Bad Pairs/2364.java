@@ -9,6 +9,9 @@
 // + Time: O(n)
 // + Space: O(n)
 
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     public long countBadPairs(int[] nums) {
         int n = nums.length;
