@@ -1,3 +1,34 @@
+# LeetCode Problem 3066: Minimum Operations to Exceed Threshold Value II
+
+## Problem Description
+
+Given an array of integers and a threshold value, the task is to find the minimum number of operations required to make the sum of the array elements exceed the threshold. In one operation, you can increment any element of the array by 1.
+
+## Example
+
+### Example 1
+```
+Input: nums = [1, 2, 3], threshold = 10
+Output: 4
+Explanation: Increment the elements as follows: [1, 2, 3] -> [2, 2, 3] -> [3, 2, 3] -> [4, 2, 3] -> [4, 3, 3]. The sum is now 10.
+```
+
+### Example 2
+```
+Input: nums = [1, 1, 1], threshold = 5
+Output: 2
+Explanation: Increment the elements as follows: [1, 1, 1] -> [2, 1, 1] -> [2, 2, 1]. The sum is now 5.
+```
+
+## Constraints
+
+- `1 <= nums.length <= 10^5`
+- `1 <= nums[i] <= 10^4`
+- `1 <= threshold <= 10^9`
+
+
+## Solution
+```java
 // 3066. Minimum Operations to Exceed Threshold Value II
 // Difficulty: Medium
 // Link: https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/
@@ -37,3 +68,4 @@ class Solution {
         return ans;
     }
 }
+```
