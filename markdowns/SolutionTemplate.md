@@ -1,8 +1,7 @@
-// Problem Name
-// Difficulty
+// Problem Name | Difficulty
+// Problem Link
 
-// DSAs
-// Methods & Approaches
+// DSAs | Methods & Approaches
 // Runtime: _ms (dd/mm/yyyy | __am/pm - GMT+7)
 
 // Complexity:
